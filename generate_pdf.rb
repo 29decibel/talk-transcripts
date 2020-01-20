@@ -3,6 +3,7 @@
 # ```
 #    sudo apt-get install pandoc
 #    sudo apt-get install texlive-latex-base
+#    sudo apt-get install texlive-latex-extra
 #    sudo apt-get install texlive-fonts-recommended
 # 
 #    cd Hickey_Rich
@@ -17,5 +18,5 @@ markdowns.each do |markdown|
   folder = parts[1]
   file_name = parts[2]
 
-  system "cd #{folder} && pandoc -V geometry:margin=3cm -o #{file_name.gsub('.md','.pdf')} ./#{file_name}"
+  system "cd #{folder} && pandoc -V geometry:margin=1cm -V fontsize=12pt -o #{file_name.gsub('.md','.pdf')} ./#{file_name}"
 end
